@@ -35,203 +35,136 @@ body {
     padding: 40px 20px;
     text-align: center;
     position: relative;
-}
-
-.title-container {
-    margin-bottom: 30px;
-    animation: slideDown 1s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.animated-title {
-    font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 5px;
+    min-height: 500px;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.number {
-    color: #00ff00;
-    animation: glow 2s ease-in-out infinite;
-}
-
-.way {
-    color: #ff0000;
-    animation: glow 2s ease-in-out infinite 0.3s;
-}
-
-.talk {
-    color: #00ff00;
-    animation: glow 2s ease-in-out infinite 0.6s;
-}
-
-@keyframes glow {
-    0%, 100% {
-        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
-    }
-    50% {
-        text-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px currentColor;
-    }
-}
-
-.radio-show {
-    font-size: 3.5rem;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.radio {
-    color: #ff0000;
-    animation: bounce 2s ease-in-out infinite;
-}
-
-.show {
-    color: #00ff00;
-    animation: bounce 2s ease-in-out infinite 0.5s;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.microphone-container {
-    width: 200px;
-    height: 250px;
-    margin: 40px auto;
+.hero-image-container {
     position: relative;
-    animation: float 3s ease-in-out infinite;
+    display: inline-block;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-.microphone {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.mic-head {
-    width: 80px;
-    height: 100px;
-    background: linear-gradient(145deg, #c0c0c0, #808080);
-    border-radius: 40px 40px 20px 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.hero-image {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    display: block;
+    border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-.mic-head::before {
-    content: '';
+.floating-particles {
     position: absolute;
-    width: 70px;
-    height: 90px;
-    background: repeating-linear-gradient(
-        0deg,
-        #606060,
-        #606060 2px,
-        #808080 2px,
-        #808080 4px
-    );
-    border-radius: 35px 35px 15px 15px;
-    top: 5px;
-    left: 5px;
-}
-
-.mic-body {
-    width: 40px;
-    height: 80px;
-    background: linear-gradient(145deg, #a0a0a0, #606060);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 100px;
-    border-radius: 5px;
-}
-
-.mic-stand {
-    width: 100px;
-    height: 3px;
-    background: #606060;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 180px;
-}
-
-.mic-stand::after {
-    content: '';
-    width: 80px;
-    height: 20px;
-    background: radial-gradient(ellipse, #404040, #202020);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
-    border-radius: 50%;
-}
-
-.sound-waves {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     pointer-events: none;
+    overflow: hidden;
 }
 
-.wave {
-    position: absolute;
-    border: 2px solid rgba(0, 255, 0, 0.5);
-    border-radius: 50%;
-    animation: soundWave 3s ease-out infinite;
+/* Mission Section */
+.mission-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(255, 0, 0, 0.1));
+    text-align: center;
 }
 
-.wave1 {
-    width: 100px;
-    height: 100px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.mission-content h2 {
+    font-size: 2.5rem;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.wave2 {
-    width: 150px;
-    height: 150px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    animation-delay: 1s;
+.mission-statement {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
-.wave3 {
-    width: 200px;
-    height: 200px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    animation-delay: 2s;
+.quotes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
+
+.quote-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #00ff00;
+    transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+}
+
+.quote-card blockquote {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Topics Section */
+.topics-section {
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.topics-section h2 {
+    font-size: 2.5rem;
+    color: #00ff00;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topic-card {
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 3px solid #ff0000;
+    transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: scale(1.05);
+    border-top-color: #ffeb3b;
+    box-shadow: 0 15px 40px rgba(255, 235, 59, 0.3);
+}
+
+.topic-card h3 {
+    color: #ffeb3b;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.topic-card p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Removed old title and microphone styles since we're using the hero image now */
 
 @keyframes soundWave {
     0% {
@@ -372,14 +305,13 @@ body {
     width: 120px;
     height: 120px;
     background: linear-gradient(45deg, #00ff00, #ffeb3b);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 50%;
     margin: 0 auto 20px;
-    animation: rotate 10s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
 }
 
 .guest-info h3 {
@@ -540,5 +472,14 @@ body {
     
     .guests-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .hero-image {
+        max-height: 250px;
+    }
+    
+    .main-header {
+        min-height: 350px;
+        padding: 20px 10px;
     }
 }

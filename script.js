@@ -1,23 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    function animateText(element, delay = 100) {
-        const text = element.textContent;
-        element.textContent = '';
-        element.style.opacity = '1';
-        
-        [...text].forEach((char, index) => {
-            setTimeout(() => {
-                element.textContent += char;
-            }, index * delay);
-        });
-    }
-    
-    const titleElements = document.querySelectorAll('.animated-title span, .radio-show span');
-    titleElements.forEach((element, index) => {
-        setTimeout(() => {
-            element.style.animation = element.style.animation || 'glow 2s ease-in-out infinite';
-        }, index * 200);
-    });
+    // The hero image is now static - no animations on the image itself
     
     function createParticle() {
         const particle = document.createElement('div');
