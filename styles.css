@@ -424,6 +424,17 @@ body {
     margin-bottom: 10px;
 }
 
+.contact-link {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
 .social-links {
     display: flex;
     gap: 20px;
